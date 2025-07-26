@@ -16,9 +16,10 @@ export default function OrderCard({ order }: Props) {
           <Image src={order.image_url} alt={order.sensor_type} fill className="object-cover rounded" />
         </div>
         <div className="flex-1">
-          <p className="text-sm font-medium">{order.year} {order.brand} {order.model}</p>
-          <p className="text-xs text-gray-500">{order.sensor_type} - {order.position}</p>
-          <p className="text-xs font-semibold">${order.price_usd.toFixed(2)} vs ${order.competitor_price.toFixed(2)}</p>
+          <p className="text-sm font-medium">{order.year} {order.brand} {order.model} - {order.component}</p>
+          <p className="text-xs text-gray-500">VIN: {order.vin}</p>
+          <p className="text-xs">{order.sensor_type} | {order.manufacturer_code} | {order.internal_part_number}</p>
+          <p className="text-xs font-semibold">Stock: {order.stock} - ${order.price_usd.toFixed(2)} vs ${order.competitor_price.toFixed(2)}</p>
         </div>
       </div>
       <OrderModal order={order} open={open} onOpenChange={setOpen} />
