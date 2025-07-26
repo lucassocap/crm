@@ -7,7 +7,7 @@ export interface Order {
   component: string;
   vin: string;
   address: string;
-  status: 'pending' | 'in-progress' | 'completed';
+  status: 'pending' | 'in_progress' | 'completed';
   timestamp: string;
   sensor_type: string;
   manufacturer_code: string;
