@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import KanbanBoard from '../components/KanbanBoard';
-import '../styles/globals.css';
 
 export default function Dashboard() {
   return (
